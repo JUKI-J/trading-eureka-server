@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: TRADING-EUREKA-SERVER
+  config:
+    import: optional:configserver:lb://CONFIG-SERVER:9191
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: TRADING-EUREKA-SERVER
+  client:
+    register-with-eureka: false
+    fetch-registry: false
